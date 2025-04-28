@@ -1,7 +1,7 @@
 {
   "name": "gerador-imagem-aline",
   "version": "1.0.0",
-  "description": "API para gerar imagem personalizada da Aline",
+  "description": "API para gerar imagens personalizadas da Aline",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
