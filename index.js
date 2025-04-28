@@ -13,18 +13,18 @@ app.get('/webhook/aline', async (req, res) => {
     const canvas = createCanvas(width, height);
     const context = canvas.getContext('2d');
 
-    // Carrega a imagem do copo
+    // Carrega o copo de fundo
     const imagePath = path.join(__dirname, 'assets', 'copo.png');
     const background = await loadImage(imagePath);
     context.drawImage(background, 0, 0, width, height);
 
-    // Texto ajustado para ficar abaixo da logo
-    context.font = 'bold 38px sans-serif';
+    // Configurações de texto ajustadas
+    context.font = 'bold 36px sans-serif'; // Corrigido para sans-serif
     context.fillStyle = '#000000'; // Cor preta
     context.textAlign = 'center';
-    context.fillText(name, width / 2, 720); 
+    context.fillText(name, width / 2, 720); // Posição abaixo da logo
 
-    // Retorna imagem gerada
+    // Envia a imagem gerada
     res.setHeader('Content-Type', 'image/png');
     canvas.pngStream().pipe(res);
 });
