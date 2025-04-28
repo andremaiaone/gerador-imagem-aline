@@ -19,7 +19,7 @@ app.get('/webhook/aline', async (req, res) => {
     context.drawImage(background, 0, 0, width, height);
 
     // Texto ajustado para ficar abaixo da logo
-    context.font = 'bold 36px Arial';
+    context.font = 'bold 38px sans-serif';
     context.fillStyle = '#000000'; // Cor preta
     context.textAlign = 'center';
     context.fillText(name, width / 2, 720); 
